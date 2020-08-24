@@ -16,17 +16,24 @@ meta:
 
 
 data:
-    - types: Email address of UseGalaxy.eu users
+    - types: Name of NEMO users
       categories: End users
-      purpose: Contacting end users in case of privacy breaches or changes to privacy policies
-      recipients: Administrators of the UseGalaxy.eu service
+      purpose: Addressing users throuh email and phone
+      recipients: Administrators of the NEMO service
       storage_period: Until user requests deletion
-      security: Postgresql DB with highly restricted and audited access
+      security: ApacheDS and Postgresql DB with highly restricted and audited access
       exported: false
-    - types: Chosen name provided by UseGalaxy.eu users
+    - types: Email address of NEMO users
       categories: End users
-      purpose: Referring to users per their preference in the user interface. Additionally used to refer to user when they choose to share their workflows or data publicly.
-      recipients: Administrators of the UseGalaxy.eu service, made public only when the user requests to publish a history/workflow/etc publicly.
+      purpose: Contacting end users with important cluster information
+      recipients: Administrators of the NEMO service
       storage_period: Until user requests deletion
-      security: Postgresql DB with highly restricted and audited access
+      security: ApacheDS and Postgresql DB with highly restricted and audited access
+      exported: false
+    - types: eduPersonPrincipalName
+      categories: End users
+      purpose: Unique identifier within the state of Baden-Württemberg in the form of `user@scope`, where `user` represents the local `username` within a university and scope is the domain name of the user's university (e.g. uni-freiburg.de)
+      recipients: Administrators of the NEMO service
+      storage_period: Until user requests deletion
+      security: ApacheDS and Postgresql DB with highly restricted and audited access
       exported: false
